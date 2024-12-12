@@ -14,6 +14,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        User::factory()->create([
+            'name' => 'Test User',
+            'email' => 'user@example.com',
+            'role' => 'user',
+            'password'=> bcrypt('12345678')
+        ]);
+
         User::factory(10)->create();
 
         User::factory()->create([
@@ -23,6 +30,6 @@ class DatabaseSeeder extends Seeder
             'password'=> bcrypt('12345678')
         ]);
 
-        TruckOrder::factory(10)->create();
+        TruckOrder::factory(11)->create();
     }
 }

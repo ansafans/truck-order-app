@@ -22,7 +22,7 @@ class TruckOrderFactory extends Factory
             'company_name'=> fake()->name(),
             'description'=>fake()->sentence(),
             'size'=> "height: 8ft, width: 5ft, length: 10ft",
-            'weight'=> ((string) fake()->numberBetween(0, 1000)).' Kg',
+            'weight'=> ((string) fake()->numberBetween(1, 1000)).' Kg',
             'status'=> fake()->randomElement(['pending', 'in_progress', 'delivered']),
             'pickup_name'=> fake()->name(),
             'pickup_address'=> fake()->streetAddress(),
